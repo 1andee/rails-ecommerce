@@ -1,0 +1,27 @@
+<section class="users-show">
+
+  <header class="page-header">
+    <h1>
+      Register
+    </h1>
+  </header>
+
+  <div class="container">
+    <%= form_for :user, url: '/users' do |f| %>
+      Name: <%= f.text_field :name %>
+      <br>
+      <br>
+      Email: <%= f.text_field :email %>
+      <br>
+      <br>
+      Password: <%= f.password_field :password %>
+      <br>
+      <br>
+      Password Confirmation: <%= f.password_field :password_confirmation %>
+      <br>
+      <br>
+      <%= f.submit "Submit" %>
+    <% end %>
+  </div>
+
+</section>
