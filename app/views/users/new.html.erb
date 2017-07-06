@@ -8,7 +8,8 @@
 
   <div class="container">
     <%= form_for :user, url: '/users' do |f| %>
-      Name: <%= f.text_field :name %>
+      First Name: <%= f.text_field :firstname %>
+      Last Name: <%= f.text_field :lastname %>
       <br>
       <br>
       Email: <%= f.text_field :email %>
