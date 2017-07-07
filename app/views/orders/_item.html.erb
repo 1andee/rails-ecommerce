@@ -1,19 +1,19 @@
-<% @order.line_items.each do |item| %>
+<% @order.line_items.each do |i| %>
 
   <tr>
     <td>
-      <%= image_tag item.product.image.tiny %>
+      <%= image_tag i.product.image.tiny %>
     </td>
     <td>
-      <h4><%= item.product.name %></h4>
+      <h4><%= i.product.name %></h4>
       <br>
-      <p><%= item.product.description %></p>
+      <p><%= i.product.description %></p>
     </td>
     <td>
-      <%= item.quantity %>
+      <%= i.quantity %>
     </td>
     <td>
-      $<%= "%.2f" % (item.total_price_cents / 100.0) %>
+      $<%= "%.2f" % (i.total_price_cents / 100.0) %>
     </td>
   </tr>
 
