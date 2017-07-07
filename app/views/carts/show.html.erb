@@ -4,6 +4,14 @@
     <h1>My Cart</h1>
   </header>
 
+
+  <% if cart.blank? %>
+
+  <div class="alert alert-danger" role="alert">
+   Your cart is empty, dawg. Be a good capitalist and buy something!
+  </div>
+
+   <% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -18,7 +26,7 @@
         <% @cart_total = 0 %>
         <% cart.each do |product_id, details| %>
           <%= render 'item', product_id: product_id, details: details %>
-        <% end %>
+          <% end %>
       </tbody>
       <tfoot>
         <tr>
@@ -26,7 +34,7 @@
             TOTAL:
           </th>
           <th>
-            <%= @cart_total %>
+            $<%= @cart_total %>
           </th>
         </tr>
       </tfoot>
@@ -49,5 +57,6 @@
       <% end %>
     </div>
   </div>
+  <% end %>
 
 </section>
