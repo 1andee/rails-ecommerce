@@ -3,7 +3,7 @@ class Admin::CategoriesController < ApplicationController
   http_basic_authenticate_with name: ENV["ADMIN_NAME"], password: ENV["ADMIN_PASS"], except: :nonauth
 
   def nonauth
-    render plain: "Feck off!"
+    render plain: "Access denied."
   end
 
   def index
