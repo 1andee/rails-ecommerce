@@ -8,20 +8,21 @@
 
   <div class="container">
     <%= form_for :user, url: '/users' do |f| %>
-    First Name: <%= f.text_field :firstname %>
-    Last Name: <%= f.text_field :lastname %>
+    <div class="form-inline">
+    <%= f.text_field :firstname, class: "form-control", placeholder: "First name"  %>
+    <%= f.text_field :lastname, class: "form-control", placeholder: "Last name"  %>
+    </div>
     <br>
     <br>
-    Email: <%= f.text_field :email %>
+    <%= f.text_field :email, class: "form-control", placeholder: "Email" %>
     <br>
     <br>
-    Password: <%= f.password_field :password %>
+    <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
+    <br>
+    <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Password Confirmation" %>
     <br>
     <br>
-    Password Confirmation: <%= f.password_field :password_confirmation %>
-    <br>
-    <br>
-    <%= f.submit "Submit" %>
+    <%= f.submit "Submit", class: "btn btn-primary" %>
     <% end %>
   </div>
 
