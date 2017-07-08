@@ -1,10 +1,4 @@
-class Admin::CategoriesController < ApplicationController
-
-  http_basic_authenticate_with name: ENV["ADMIN_NAME"], password: ENV["ADMIN_PASS"], except: :nonauth
-
-  def nonauth
-    render plain: "Access denied."
-  end
+class Admin::CategoriesController < Admin::BaseController
 
   def index
     @categories = Category.order(id: :desc).all
