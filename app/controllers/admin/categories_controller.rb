@@ -1,5 +1,11 @@
 class Admin::CategoriesController < ApplicationController
 
+  http_basic_authenticate_with name: ENV["ADMIN_NAME"], password: ENV["ADMIN_PASS"], except: :nonauth
+
+  def nonauth
+    render plain: "Feck off!"
+  end
+
   def index
     @categories = Category.order(id: :desc).all
   end
