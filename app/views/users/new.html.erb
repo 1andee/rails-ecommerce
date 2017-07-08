@@ -7,23 +7,25 @@
   </header>
 
   <div class="container">
+    <div class="row">
+      <div class="col-xs-6">
     <%= form_for :user, url: '/users' do |f| %>
     <div class="form-inline">
     <%= f.text_field :firstname, class: "form-control", placeholder: "First name"  %>
     <%= f.text_field :lastname, class: "form-control", placeholder: "Last name"  %>
     </div>
     <br>
-    <br>
     <%= f.text_field :email, class: "form-control", placeholder: "Email" %>
     <br>
-    <br>
+    <div class="form-inline">
     <%= f.password_field :password, class: "form-control", placeholder: "Password" %>
-    <br>
     <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Password Confirmation" %>
-    <br>
-    <br>
+  </div>
+  <br>
     <%= f.submit "Submit", class: "btn btn-primary" %>
     <% end %>
   </div>
+</div>
+</div>
 
 </section>
