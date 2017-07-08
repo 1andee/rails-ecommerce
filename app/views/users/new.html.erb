@@ -8,20 +8,20 @@
 
   <div class="container">
     <%= form_for :user, url: '/users' do |f| %>
-      First Name: <%= f.text_field :firstname %>
-      Last Name: <%= f.text_field :lastname %>
-      <br>
-      <br>
-      Email: <%= f.text_field :email %>
-      <br>
-      <br>
-      Password: <%= f.password_field :password %>
-      <br>
-      <br>
-      Password Confirmation: <%= f.password_field :password_confirmation %>
-      <br>
-      <br>
-      <%= f.submit "Submit" %>
+    First Name: <%= f.text_field :firstname %>
+    Last Name: <%= f.text_field :lastname %>
+    <br>
+    <br>
+    Email: <%= f.text_field :email %>
+    <br>
+    <br>
+    Password: <%= f.password_field :password %>
+    <br>
+    <br>
+    Password Confirmation: <%= f.password_field :password_confirmation %>
+    <br>
+    <br>
+    <%= f.submit "Submit" %>
     <% end %>
   </div>
 

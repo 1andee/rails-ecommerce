@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
-  </head>
-  <body>
-    <h1>Thank you for your order!</h1>
-    <p>
-      The following order has been placed successfully:
-    </p>
-    <ul>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+</head>
+<body>
+  <h1>Thank you for your order!</h1>
+  <p>
+    The following order has been placed successfully:
+  </p>
+  <ul>
     <% @order.line_items.each do |i| %>
     <li>
       <%=i.product.name%>
@@ -19,7 +19,7 @@
     <% end %>
   </ul>
   <p>Grand Total: $<%= "%.2f" % (@order.total_cents / 100.0) %></p>
-    <p>Have an awesome day!</p>
-    <p>- Your friends at Junglecorp Inc.</p>
-  </body>
+  <p>Have an awesome day!</p>
+  <p>- Your friends at Junglecorp Inc.</p>
+</body>
 </html>
