@@ -21,10 +21,24 @@
           <dt>Quantity</dt>
           <dd><%= @product.quantity %></dd>
           <dt>Price</dt>
-          <dd><%= @product.price %></dd>
+          <dd>$ <%= @product.price %></dd>
         </dl>
       </div>
-    </div>
+    <div class="col-sm-8">
+      <br>
+      <dl class="dl-horizontal">
+        <% @product.reviews.each do |i| %>
+        <dt><%= show_stars i.rating %></dt>
+      <dd>
+        <%= i.description %>
+        <br>
+        Submitted <%= i.created_at %>
+      </dd>
+      <br>
+      <% end %>
+    </dl>
+  </div>
+  </div>
 
   </article>
 

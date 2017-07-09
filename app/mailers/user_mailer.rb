@@ -8,7 +8,7 @@ class UserMailer < ApplicationMailer
 
   def order_email(order)
       @order = order
-      mail(to: @order.email, subject: 'Order Confirmation #{@order.id} - Jungle.com')
+      mail(to: @order.email, subject: "Order Confirmation #{@order.id} - Jungle.com")
   end
 
 end

@@ -132,5 +132,53 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+## USERS
+
+puts "Populating users table.."
+
+User.destroy_all
+
+User.create!({
+  email: 'ian.c.duke@gmail.com',
+  password_digest: '$2a$10$yNB98OCdmMOM3fLuQKMPZ.LIOLiHVJJACwwC/Bb9qe5njgEnavlGO',
+  firstname: 'Ian',
+  lastname: 'Duke',
+  created_at: '2017-07-08 21:41:44.563279',
+  updated_at: '2017-07-08 21:41:44.563279'
+})
+
+## REVIEWS
+
+puts "Populating hard-coded reviews..."
+
+Review.destroy_all
+
+Review.create!({
+  product_id: 1,
+  user_id: 1,
+  description: "Greatest. Product. EVAR.",
+  rating: 5
+})
+
+Review.create!({
+  product_id: 1,
+  user_id: 1,
+  description: "Not as advertised",
+  rating: 2
+})
+
+Review.create!({
+  product_id: 2,
+  user_id: 1,
+  description: "Product is alright",
+  rating: 3
+})
+
+Review.create!({
+  product_id: 3,
+  user_id: 1,
+  description: "Great as a gift!",
+  rating: 4
+})
 
 puts "DONE!"
