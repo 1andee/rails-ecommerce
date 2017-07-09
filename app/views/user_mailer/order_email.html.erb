@@ -13,12 +13,12 @@
     <li>
       <%=i.product.name%>
       <br>
-      <%=i.quantity%> @ $<%= "%.2f" % (i.total_price_cents / 100.0) %>
+      <%=i.quantity%> @ <%= i.total_price %>
     </li>
     <br>
     <% end %>
   </ul>
-  <p>Grand Total: $<%= "%.2f" % (@order.total_cents / 100.0) %></p>
+  <p>Grand Total: $ <%= @order.total %></p>
   <p>Have an awesome day!</p>
   <p>- Your friends at Junglecorp Inc.</p>
 </body>

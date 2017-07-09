@@ -13,7 +13,8 @@ A mini e-commerce application built with Rails 4.2
 6. Create .env file based on .env.example
 7. Sign up for a Stripe account
 8. Put Stripe (test) keys into appropriate .env vars
-9. Run `bin/rails s -b 0.0.0.0` to start the server
+9. Mailcatcher was used to capture outgoing emails from the server. Should you wish to view these, run `gem install mailcatcher` and then type `mailcatcher` to get started.
+10. Run `bin/rails s -b 0.0.0.0` to start the server
 
 ## Stripe Testing
 
