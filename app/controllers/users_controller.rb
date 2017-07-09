@@ -9,7 +9,7 @@ before_filter :check_session
         flash[:success] = "Your account was successfully created!"
         redirect_to '/'
       else
-        flash[:danger] = "Something blew up. Sorry about that."
+        flash[:danger] = user.errors.full_messages.join(". Also, ")
         redirect_to :back
       end
   end
