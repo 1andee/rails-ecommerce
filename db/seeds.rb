@@ -139,10 +139,10 @@ puts "Populating users table.."
 User.destroy_all
 
 User.create!({
-  email: 'ian.c.duke@gmail.com',
+  email: 'you@test.com',
   password_digest: '$2a$10$yNB98OCdmMOM3fLuQKMPZ.LIOLiHVJJACwwC/Bb9qe5njgEnavlGO',
-  firstname: 'Ian',
-  lastname: 'Duke',
+  firstname: 'David',
+  lastname: 'Davidsion',
   created_at: '2017-07-08 21:41:44.563279',
   updated_at: '2017-07-08 21:41:44.563279'
 })
