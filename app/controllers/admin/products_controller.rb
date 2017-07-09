@@ -12,7 +12,8 @@ class Admin::ProductsController < Admin::BaseController
     @product = Product.new(product_params)
 
     if @product.save
-      redirect_to [:admin, :products], notice: 'Product created!'
+      flash[:success] = "Product created!"
+      redirect_to [:admin, :products]
     else
       render :new
     end
@@ -21,7 +22,8 @@ class Admin::ProductsController < Admin::BaseController
   def destroy
     @product = Product.find params[:id]
     @product.destroy
-    redirect_to [:admin, :products], notice: 'Product deleted!'
+    flash[:danger] = "Product has been deleted."
+    redirect_to [:admin, :products]
   end
 
   private
