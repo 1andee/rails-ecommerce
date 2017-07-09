@@ -5,7 +5,7 @@ class ReviewsController < ApplicationController
   def create
     @product = Product.find(params[:product_id])
     @review = @product.reviews.create(review_params)
-    @review.user_id = current_user.id
+    @review.user = current_user
 
     if @review.save
       flash[:success] = "Review added!"

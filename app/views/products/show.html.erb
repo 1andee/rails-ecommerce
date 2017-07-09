@@ -55,7 +55,7 @@
             <br>
             Review submitted <%= i.created_at.strftime("%d %B %Y") %>
             <br>
-            <% if i.user_id = current_user %>
+            <% if i.user == current_user %>
               <%= link_to "DELETE REVIEW",
                   product_review_path(@product, i),
                   :method => :delete,
