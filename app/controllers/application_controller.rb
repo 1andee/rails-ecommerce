@@ -23,7 +23,7 @@ class ApplicationController < ActionController::Base
 
   def check_session
     if current_user.present?
-      flash[:danger] = "You are already logged in."
+      flash[:warning] = "You already have an account."
       redirect_to '/'
     end
   end

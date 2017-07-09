@@ -2,7 +2,7 @@ class SessionsController < ApplicationController
 
   def create
     if current_user
-      flash[:danger] = "You are already logged in."
+      flash[:warning] = "You are already logged in."
       redirect_to '/'
     else
       user = User.find_by_email(params[:email])
@@ -11,16 +11,21 @@ class SessionsController < ApplicationController
           flash[:success] = "Welcome back, #{user.firstname}!"
           redirect_to '/'
       else
-        flash[:danger] = "Something blew up. Sorry about that."
+        flash[:danger] = "We couldn't log you in. Please verify that your email/password is correct."
         redirect_to :back
       end
     end
   end
 
   def destroy
-    session[:user_id] = nil
-    flash[:warning] = "You have successfully logged out"
-    redirect_to '/'
+    if current_user.nil?
+      flash[:warning] = "You aren't logged in."
+      redirect_to '/'
+    else
+      session[:user_id] = nil
+      flash[:warning] = "You have successfully logged out"
+      redirect_to '/'
+    end
   end
 
 end
