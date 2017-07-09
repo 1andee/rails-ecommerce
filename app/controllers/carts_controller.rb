@@ -1,7 +1,6 @@
 class CartsController < ApplicationController
 
-  def show
-  end
+  before_filter :require_login
 
   def add_item
     product_id = params[:product_id].to_s

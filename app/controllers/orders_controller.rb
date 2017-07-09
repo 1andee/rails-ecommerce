@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
 
+  before_filter :require_login
+
   def show
     @order = Order.find(params[:id])
   end

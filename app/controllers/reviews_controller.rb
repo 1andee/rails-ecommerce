@@ -1,5 +1,7 @@
 class ReviewsController < ApplicationController
 
+  before_filter :require_login
+
   def create
     @product = Product.find(params[:product_id])
     @review = @product.reviews.create(review_params)
@@ -12,7 +14,7 @@ class ReviewsController < ApplicationController
       flash[:danger] = "Something blew up. Sorry about that."
       redirect_to :back
     end
-    
+
   end
 
   def destroy
