@@ -24,22 +24,51 @@
           <dd>$ <%= @product.price %></dd>
         </dl>
       </div>
-    <div class="col-sm-8">
-      <br>
-      <dl class="dl-horizontal">
-        <% @product.reviews.each do |i| %>
-        <dt><%= show_stars i.rating %></dt>
-      <dd>
-        <%= i.description %>
+      <div class="col-sm-8">
         <br>
-        Submitted <%= i.created_at %>
-      </dd>
-      <br>
-      <% end %>
-    </dl>
-  </div>
-  </div>
+        <dl class="dl-horizontal">
+          <% if current_user %>
+          <%= form_for(Review.new, url: product_reviews_path(@product, @review)) do |f| %>
+          <dt>Add a Review</dt>
+          <dd><%= f.text_area :description, class: "form-control" %></dd>
+          <br>
+          <dt>Rating</dt>
+          <dd>
+            <%= f.select :rating,
+            options_for_select(
+            [['Excellent', 5],
+            ['Good', 4],
+            ['Average', 3],
+            ['Could be improved', 2],
+            ['Poor', 1]]),
+            class: "form-control" %>
+          </dd>
+          <br>
+          <dd><%= f.submit "Submit", class: "btn btn-primary" %></dd>
+          <% end %>
+          <% end %>
+          <br>
+          <% @product.reviews.each do |i| %>
+          <dt><%= show_stars i.rating %></dt>
+          <dd>
+            <%= i.description %>
+            <br>
+            Review submitted <%= i.created_at.strftime("%d %B %Y") %>
+            <% if i.user_id = current_user %>
+            <br>
+            <%= link_to "DELETE REVIEW",
+            product_review_path(@product, i),
+            :method => :delete,
+            class: "btn btn-danger"
+              %>
+              <% end %>
+            </dd>
+            <br>
+            <% end %>
+          </dl>
+        </div>
+      </div>
 
-  </article>
+    </article>
 
-</section>
+  </section>
