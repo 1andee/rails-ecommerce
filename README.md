@@ -2,7 +2,6 @@
 
 A mini e-commerce application built with Rails 4.2
 
-
 ## Setup
 
 1. Clone the repo to run locally
@@ -21,6 +20,18 @@ A mini e-commerce application built with Rails 4.2
 Use Credit Card # 4111 1111 1111 1111 for testing success scenarios.
 
 More information in their docs: <https://stripe.com/docs/testing#cards>
+
+## Screenshots
+
+### Main Page
+!["Screenshot of Main page"](https://raw.githubusercontent.com/1andee/rails-ecommerce/master/doc/1.png)
+
+### Product View
+!["Screenshot of Product page"](https://raw.githubusercontent.com/1andee/rails-ecommerce/master/doc/2.png)
+
+### Email Notification
+!["Screenshot of Email Notification from Mailcatcher"](https://raw.githubusercontent.com/1andee/rails-ecommerce/master/doc/3.png)
+
 
 ## Dependencies
 
