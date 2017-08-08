@@ -3,7 +3,10 @@
 A mini e-commerce application built with Rails 4.2
 
 ## Live Demo
+
 https://ianduke-rails.herokuapp.com
+
+## Overview
 
 The purpose of this project was to:
 * Become familiar with Ruby and the Rails framework
@@ -12,6 +15,7 @@ The purpose of this project was to:
 * Gain experience handling feature and bug-fix requests
 
 ## Features Implemented
+
 * Sold out badge if item quantity is zero
 * Added user login, registration, and logout functionality
 * Only admins can create/update products & categories via AdminController
