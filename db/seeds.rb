@@ -141,6 +141,33 @@ User.create!({
   updated_at: '2017-07-08 21:41:44.563279'
 })
 
+User.create!({
+  email: 'bill@whitehouse.com',
+  password_digest: '$2a$10$yNB98OCdmMOM3fLuQKMPZ.LIOLiHVJJACwwC/Bb9qe5njgEnavlGO',
+  firstname: 'Bill',
+  lastname: 'Clonton',
+  created_at: '2017-07-08 21:41:44.563279',
+  updated_at: '2017-07-08 21:41:44.563279'
+})
+
+User.create!({
+  email: 'joe@dirt.com',
+  password_digest: '$2a$10$yNB98OCdmMOM3fLuQKMPZ.LIOLiHVJJACwwC/Bb9qe5njgEnavlGO',
+  firstname: 'Joe',
+  lastname: 'Dirt',
+  created_at: '2017-07-08 21:41:44.563279',
+  updated_at: '2017-07-08 21:41:44.563279'
+})
+
+User.create!({
+  email: 'ernest@ridesagain.com',
+  password_digest: '$2a$10$yNB98OCdmMOM3fLuQKMPZ.LIOLiHVJJACwwC/Bb9qe5njgEnavlGO',
+  firstname: 'Ernest P.',
+  lastname: 'Worrell',
+  created_at: '2017-07-08 21:41:44.563279',
+  updated_at: '2017-07-08 21:41:44.563279'
+})
+
 ## REVIEWS
 
 puts "Populating hard-coded reviews..."
