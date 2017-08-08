@@ -2,11 +2,22 @@
 
 A mini e-commerce application built with Rails 4.2
 
+## Live Demo
+https://ianduke-rails.herokuapp.com
+
 The purpose of this project was to:
 * Become familiar with Ruby and the Rails framework
 * Learn how to navigate an existing code-base
 * Use existing code style and approach to implement new features
 * Gain experience handling feature and bug-fix requests
+
+## Features Implemented
+* Sold out badge if item quantity is zero
+* Added user login, registration, and logout functionality
+* Only admins can create/update products & categories via AdminController
+* Detailed order summary page
+* Automatic email notifications for user sign-up and order confirmation
+* Product ratings system
 
 ## Setup
 
