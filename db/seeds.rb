@@ -175,29 +175,29 @@ puts "Populating hard-coded reviews..."
 Review.destroy_all
 
 Review.create!({
-  @product: 1,
-  @user: 1,
+  product_id: 1,
+  user_id: 1,
   description: "Greatest. Product. EVAR.",
   rating: 5
 })
 
 Review.create!({
-  @product: 1,
-  @user: 1,
+  product_id: 1,
+  user_id: 1,
   description: "Not as advertised",
   rating: 2
 })
 
 Review.create!({
-  @product: 2,
-  @user: 1,
+  product_id: 2,
+  user_id: 1,
   description: "Product is alright",
   rating: 3
 })
 
 Review.create!({
-  @product: 3,
-  @user: 1,
+  product_id: 3,
+  user_id: 1,
   description: "Great as a gift!",
   rating: 4
 })
