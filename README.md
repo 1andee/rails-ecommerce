@@ -16,12 +16,15 @@ The purpose of this project was to:
 
 ## Features Implemented
 
+* User registration, login, logout
 * Sold out badge if item quantity is zero
-* Added user login, registration, and logout functionality
-* Only admins can create/update products & categories via AdminController
-* Detailed order summary page
-* Automatic email notifications for user sign-up and order confirmation
 * Product ratings system
+* Detailed order summary page
+* Flash messaging styled with Bootstrap
+* Automatic email notifications for user sign-up and order confirmation
+* Product & category changes restricted to authorized users only (via AdminController)
+* Heroku deployment
+* Product image uploader integrated with Amazon S3 (AWS)
 
 ## Setup
 
@@ -57,5 +60,8 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 ## Dependencies
 
 * Rails 4.2 [Rails Guide](http://guides.rubyonrails.org/v4.2/)
-* PostgreSQL 9.x
+* PostgreSQL
 * Stripe
+* Bcrypt
+* CarrierWave
+* Fog
