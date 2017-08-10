@@ -35,7 +35,7 @@ gem 'carrierwave'
 gem 'rmagick'
 gem 'stripe'
 gem 'faker'
-gem 'fog-aws'
+gem 'fog', require: 'fog/aws'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
