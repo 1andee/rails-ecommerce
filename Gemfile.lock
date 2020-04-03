@@ -62,8 +62,7 @@ GEM
     autoprefixer-rails (9.7.5)
       execjs
     bcrypt (3.1.13)
-    binding_of_caller (0.8.0)
-      debug_inspector (>= 0.0.1)
+    bindex (0.8.1)
     bootstrap-sass (3.4.1)
       autoprefixer-rails (>= 5.2.1)
       sassc (>= 2.0.0)
@@ -78,7 +77,6 @@ GEM
       mini_mime (>= 0.1.3)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
-    debug_inspector (0.0.3)
     dotenv (2.7.5)
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
@@ -374,11 +372,11 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.2.0)
       execjs (>= 0.3.0, < 3)
-    web-console (2.3.0)
-      activemodel (>= 4.0)
-      binding_of_caller (>= 0.7.2)
-      railties (>= 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
+    web-console (3.5.1)
+      actionview (>= 5.0)
+      activemodel (>= 5.0)
+      bindex (>= 0.4.0)
+      railties (>= 5.0)
     websocket-driver (0.7.1)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.4)
@@ -413,7 +411,7 @@ DEPENDENCIES
   stripe
   turbolinks
   uglifier (>= 1.3.0)
-  web-console (~> 2.0)
+  web-console (~> 3.5.1)
 
 RUBY VERSION
    ruby 2.7.0p0
