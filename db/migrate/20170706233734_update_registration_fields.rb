@@ -1,4 +1,4 @@
-class UpdateRegistrationFields < ActiveRecord::Migration
+class UpdateRegistrationFields < ActiveRecord::Migration[6.0]
   def change
     change_table :users do |t|
       t.remove :name

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-before_filter :check_session
+before_action :check_session
 
   def create
     user = User.new(user_params)
@@ -10,7 +10,7 @@ before_filter :check_session
         redirect_to '/'
       else
         flash[:danger] = user.errors.full_messages.join(". Also, ")
-        redirect_to :back
+        redirect_back(fallback_location: root_path)
       end
   end
 

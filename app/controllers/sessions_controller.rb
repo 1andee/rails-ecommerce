@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-before_filter :check_session, only: [:new, :create]
+before_action :check_session, only: [:new, :create]
 
   def create
     user = User.find_by_email(params[:email])
@@ -10,7 +10,7 @@ before_filter :check_session, only: [:new, :create]
       redirect_to '/'
     else
       flash[:danger] = "We couldn't log you in. Please verify that your email/password is correct."
-      redirect_to :back
+      redirect_back(fallback_location: root_path)
     end
   end
 

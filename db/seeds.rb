@@ -19,9 +19,9 @@ end
 
 puts "Finding or Creating Categories ..."
 
-cat1 = Category.find_or_create_by! name: 'Apparel'
-cat2 = Category.find_or_create_by! name: 'Electronics'
-cat3 = Category.find_or_create_by! name: 'Furniture'
+cat1 = Category.find_or_create_by! name: 'PVC Figure'
+cat2 = Category.find_or_create_by! name: 'Nendoroid'
+cat3 = Category.find_or_create_by! name: 'Gunpla'
 
 ## PRODUCTS
 
@@ -30,7 +30,7 @@ puts "Re-creating Products ..."
 Product.destroy_all
 
 cat1.products.create!({
-  name:  'Men\'s Classy shirt',
+  name:  'Emilia Crystal Dress (LE)',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel1.jpg'),
   quantity: 10,
@@ -38,7 +38,7 @@ cat1.products.create!({
 })
 
 cat1.products.create!({
-  name:  'Women\'s Zebra pants',
+  name:  'Rem Crystal Dress (LE)',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel2.jpg'),
   quantity: 18,
@@ -46,7 +46,7 @@ cat1.products.create!({
 })
 
 cat1.products.create!({
-  name:  'Hipster Hat',
+  name:  'Yami To-Love Ru Darkness',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel3.jpg'),
   quantity: 0,
@@ -54,7 +54,7 @@ cat1.products.create!({
 })
 
 cat1.products.create!({
-  name:  'Hipster Socks',
+  name:  'Yami To-Love Ru (LE)',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel4.jpg'),
   quantity: 8,
@@ -62,7 +62,7 @@ cat1.products.create!({
 })
 
 cat1.products.create!({
-  name:  'Russian Spy Shoes',
+  name:  'Lala To-Love Ru',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel5.jpg'),
   quantity: 8,
@@ -70,7 +70,7 @@ cat1.products.create!({
 })
 
 cat1.products.create!({
-  name:  'Human Feet Shoes',
+  name:  'Rikka Chuunibyou',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('apparel6.jpg'),
   quantity: 82,
@@ -79,7 +79,7 @@ cat1.products.create!({
 
 
 cat2.products.create!({
-  name:  'Modern Skateboards',
+  name:  'Kaguya-sama Love is War',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('electronics1.jpg'),
   quantity: 40,
@@ -87,7 +87,7 @@ cat2.products.create!({
 })
 
 cat2.products.create!({
-  name:  'Hotdog Slicer',
+  name:  'Random Stuff',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('electronics2.jpg'),
   quantity: 3,
@@ -95,7 +95,7 @@ cat2.products.create!({
 })
 
 cat2.products.create!({
-  name:  'World\'s Largest Smartwatch',
+  name:  'Nezuko Kimetsu no Yaiba',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('electronics3.jpg'),
   quantity: 32,
@@ -103,7 +103,7 @@ cat2.products.create!({
 })
 
 cat3.products.create!({
-  name:  'Optimal Sleeping Bed',
+  name:  'Random Gundam',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('furniture1.jpg'),
   quantity: 320,
@@ -111,7 +111,7 @@ cat3.products.create!({
 })
 
 cat3.products.create!({
-  name:  'Electric Chair',
+  name:  'Barbatos Iron Blooded Orphans',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('furniture2.jpg'),
   quantity: 2,
@@ -119,7 +119,7 @@ cat3.products.create!({
 })
 
 cat3.products.create!({
-  name:  'Red Bookshelf',
+  name:  'Original Gundam Half-clear Ver',
   description: Faker::Hipster.paragraph(4),
   image: open_asset('furniture3.jpg'),
   quantity: 23,

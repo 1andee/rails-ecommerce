@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
 
-  before_filter :require_login
+  before_action :require_login
 
   def create
     @product = Product.find(params[:product_id])
@@ -9,10 +9,10 @@ class ReviewsController < ApplicationController
 
     if @review.save
       flash[:success] = "Review added!"
-      redirect_to :back
+      redirect_back(fallback_location: root_path)
     else
       flash[:danger] = "Something blew up. Sorry about that."
-      redirect_to :back
+      redirect_back(fallback_location: root_path)
     end
 
   end
@@ -21,7 +21,7 @@ class ReviewsController < ApplicationController
     @review = Review.find params[:id]
     @review.destroy
     flash[:danger] = "Review deleted!"
-    redirect_to :back
+    redirect_back(fallback_location: root_path)
   end
 
   private
